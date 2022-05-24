@@ -1,0 +1,10 @@
+.origin {
+    width: 100%;
+    display: flex;
+}
+.body-panel {
+    width: calc(100% - 280px);
+    position: absolute;
+    top: 0;
+    left: 0;
+}

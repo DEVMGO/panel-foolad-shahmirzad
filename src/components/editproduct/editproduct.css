@@ -1,0 +1,49 @@
+#editproduct {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+#editproduct .header-edit {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+}
+#editproduct .header-edit .title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+#editproduct .header-edit .title h5 {
+    font-size: 1.5rem;
+    color: #212529;
+}
+#editproduct .header-edit .title button {
+    font-size: 1rem;
+    color: #212529;
+}
+#editproduct .header-edit .title button svg {
+    fill: #0D6EFD;
+}
+#editproduct .header-edit .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#editproduct .header-edit .buttons button {
+    margin: 0 .5rem;
+    padding-bottom: .5rem;
+}
+#editproduct .tabs,
+#editproduct .tab-content,
+#editproduct .fade .tab-pane
+#editproduct  {
+    width: 100%;
+}

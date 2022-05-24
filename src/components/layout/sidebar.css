@@ -1,0 +1,75 @@
+.sidebar {
+    position: fixed;
+    width: 280px;
+    height: 100vh;
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    background: #303641;
+    border-left: 1px solid #cccccc;
+}
+
+.sidebar .logo {
+    width: 100%;
+    padding: 1rem;
+    margin: 0;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .list-items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0.5rem 1rem;
+    margin-top: 4rem;
+}
+.itemorigin {
+    justify-content: flex-start !important;
+}
+.sidebar .list-items .item a,
+.sidebar .list-items .itemorigin a {
+    color: #AAABAE;
+}
+.sidebar .list-items .item, .itemorigin {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #AAABAE;
+    font-size: 1rem;
+    padding: 1rem .5rem;
+    width: 100%;
+}
+.sidebar .list-items li:hover {
+    color: #fff;
+    background: #0D6EFD;
+    cursor: pointer;
+    border-radius: .4rem;
+}
+.sidebar .list-items li svg {
+    margin-left: .4rem;
+}
+
+.sidebar .sub-items {
+    width: 100%;
+    padding: .5rem 2.5rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+.sidebar .sub-items a {
+    color: #AAABAE;
+    padding: .5rem 0;
+    font-size: .9rem;
+}
+.sidebar .sub-items a:hover {
+    color: #fff;
+    cursor: pointer;
+}

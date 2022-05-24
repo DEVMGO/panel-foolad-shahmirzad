@@ -1,0 +1,36 @@
+.navbar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 1px solid #c4c4c4;
+}
+.navbar .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .user .img-user {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+}
+.navbar .user .img-user img {
+    max-width: 100%;
+}
+.navbar .user h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #303641;
+    margin-right: .5rem;
+}
+.navbar button {
+    font-size: 1rem;
+    color: #303641;
+    font-weight: 600;
+}
+.navbar button svg {
+    margin-left: .5rem;
+}
