@@ -1,0 +1,81 @@
+#edittab {
+    width: 100%;
+    padding: 1rem 3rem;
+}
+#edittab .item-edittab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .7rem 0;
+}
+#edittab .item-edittab .title svg {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    fill: #6c757dc2;
+}
+#edittab .item-edittab label {
+    color: #212529;
+}
+#edittab .item-edittab textarea {
+    width: 78%;
+    height: 5rem;
+}
+#edittab .item-edittab:nth-child(1) input {
+    height: 2.8rem;
+    width: 78%;
+}
+#edittab .item-edittab:nth-child(4) input {
+    min-width: 2rem;
+    width: 78%;
+}
+#edittab .item-edittab .css-b62m3t-container input {
+    height: 2rem;
+    width: 78%;
+}
+#edittab .item-edittab input {
+    /* min-width: 20rem; */
+    width: 78%;
+    border-radius: .2rem;
+    border: 1px solid #c4c4c4;
+}
+#edittab .item-edittab input:hover {
+    cursor: pointer;
+}
+#edittab .item-edittab .css-b62m3t-container {
+    /* min-width: 20rem; */
+    width: 78%;
+}
+#edittab .item-edittab .css-b62m3t-container div {
+    display: flex;
+    justify-content: space-between;
+}
+#edittab #react-select-3-listbox,
+#edittab #react-select-3-listbox div, 
+#edittab #react-select-5-listbox,
+#edittab #react-select-5-listbox div {
+    flex-direction: column;
+}
+#edittab .date-edit {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#edittab .date-edit .item-edittab {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .7rem 0;
+}
+#edittab .date-edit .item-edittab:nth-child(1) {
+    padding-left: 0.7rem;
+}
+#edittab .date-edit .item-edittab input {
+    height: 2rem;
+    width: 100%;
+}
+#edittab .date-edit .item-edittab .rmdp-container {
+    width: 60%;
+}

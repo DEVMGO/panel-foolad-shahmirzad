@@ -28,8 +28,8 @@ const EditImage = () => {
             <label>آپلود فایل</label>
             <MdErrorOutline />
           </div>
-          <div class="mb-3">
-            <input class="form-control" type="file" id="formFile" />
+          <div className="mb-3">
+            <input className="form-control" type="file" id="formFile" />
           </div>
         </div>
         <div className="item-edittab">
@@ -37,8 +37,8 @@ const EditImage = () => {
             <label>آپلود فایل</label>
             <MdErrorOutline />
           </div>
-          <div class="mb-3">
-            <input class="form-control" type="file" id="formFile" />
+          <div className="mb-3">
+            <input className="form-control" type="file" id="formFile" />
           </div>
         </div>
         <div className="item-edittab">
@@ -46,8 +46,8 @@ const EditImage = () => {
             <label>آپلود فایل</label>
             <MdErrorOutline />
           </div>
-          <div class="mb-3">
-            <input class="form-control" type="file" id="formFile" />
+          <div className="mb-3">
+            <input className="form-control" type="file" id="formFile" />
           </div>
         </div>
       </div>

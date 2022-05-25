@@ -1,0 +1,25 @@
+#header-products {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem 0;
+    margin-bottom: 2rem;
+}
+#header-products h5 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #212529;
+}
+#header-products .buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#header-products .buttons button {
+    margin: 0 .5rem;
+    padding-bottom: .5rem;
+}
+#header-products .buttons button svg {
+    margin: 0 .5rem;
+}

@@ -27,7 +27,7 @@ const Sidebar = () => {
           <a href="/"><Dashboard /> داشبورد</a>
         </li>
         <li className="item" onClick={() => setShowSub("product")}>
-          <a href="/product" ><Cart /> محصولات</a> <BsChevronDown />
+          <a href="/products" ><Cart /> محصولات</a> <BsChevronDown />
         </li>
         {showSub == "product" ?
           <div className="sub-items">
@@ -37,7 +37,14 @@ const Sidebar = () => {
           </div>
           : ""}
         <li className="item"><a><People /> مشتری</a> <BsChevronDown /></li>
-        <li className="item"><a><Postcard /> مدیریت محتوا</a> <BsChevronDown /></li>
+        <li className="item" onClick={() => setShowSub("data")}><a><Postcard /> مدیریت محتوا</a> <BsChevronDown /></li>
+        {showSub == "data" ?
+          <div className="sub-items">
+            <a href="/blog">مدیریت بلاگ</a>
+            <a>فروش</a>
+            <a>درخواست ها</a>
+          </div>
+          : ""}
         <li className="item"><a><Chart /> گزارش ها</a> <BsChevronDown /></li>
         <li className="item"><a><Setting /> تنظیمات</a> <BsChevronDown /></li>
       </ul>

@@ -1,37 +1,13 @@
-import { useCallback, useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { Link } from "react-router-dom";
 import { Table } from "react-bootstrap";
-import Pagination from "../layout/Pagination";
-import { DataProducts } from "../../data/data";
+import { DataBlog } from "../../../data/data";
 import { BiEdit } from "react-icons/bi";
-import { Configs } from "./configs";
-import {list, BASE_URL} from '../utils/DataManager'; 
+import { useState } from "react";
+import Pagination from "../../layout/Pagination";
 import "./tables.css";
 
-
 const Tables = () => {
-  const { products } = useParams();
-  const [allBlogs, setAllBlogs] = useState([]);
-
-  const fetchMyAPI = useCallback(async () => {
-    // let response = await fetch(list(Configs[products]['route']));
-    let response = await fetch(BASE_URL + Configs[products]['route'], {
-      headers: {
-        'cultureLcid': '1065'
-      }
-    })
-    response = await response.json()
-    console.log(response.result)
-    setAllBlogs(response.result);
-  }, [])
-
-
-  useEffect(() => {
-    fetchMyAPI()
-  }, [fetchMyAPI])
-  
-
+  const [allBlogs, setAllBlogs] = useState(DataBlog);
   const [currentPage, setCurrentPage] = useState(1);
   const [postsPerPage, setPostsPerPage] = useState(5);
   const indexOfLastPost = currentPage * postsPerPage;
@@ -60,10 +36,12 @@ const Tables = () => {
       <Table striped bordered hover size="sm">
         <thead>
           <tr>
-            <th><input type='checkbox' /></th>
-            {Configs[products]['list_fields'].map((item, i) => (
-              <th key={i}>{item.title}</th>
-            ))}
+            <th>
+              <input type="checkbox" />
+            </th>
+            <th>تصویر</th>
+            <th>عنوان</th>
+            <th colSpan={2}>توضیحات</th>
             <th>ویرایش</th>
           </tr>
         </thead>
@@ -73,11 +51,11 @@ const Tables = () => {
               <td>
                 <input type="checkbox" />
               </td>
-              {Configs[products]['list_fields'].map((list_item, i) => (
-                <td key={i}>{item[list_item.name]} {list_item.after}</td>
-              ))}
+              <td>{item.image}</td>
+              <td>{item.title}</td>
+              <td colSpan={2}>{item.description}</td>
               <td>
-                <button className="btn">
+                <button className="btn" >
                   <Link to={`editproduct/${item.id}`}>
                     <BiEdit /> ویرایش
                   </Link>
@@ -113,18 +91,5 @@ const Tables = () => {
     </div>
   );
 };
-
-// export async function getStaticProps() {
-//   // const { products } = useParams();
-//   const res = await list(model['route']);
-//   const records = await res.json();
-//   console.log(records);
-
-//   return {
-//     props: {
-//       records,
-//     },
-//   }
-// }
 
 export default Tables;

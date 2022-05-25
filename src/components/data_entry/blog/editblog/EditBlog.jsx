@@ -1,44 +1,37 @@
 import { BsFillArrowRightCircleFill, BsBoxArrowInDown } from "react-icons/bs";
-import { AiOutlineEye } from "react-icons/ai";
 import { RiFileCopyLine } from "react-icons/ri";
-import Trash from "../../assets/icons/trash";
+import Trash from "../../../../assets/icons/trash";
 import { Tab, Tabs } from "react-bootstrap";
 import EditTab from "./EditTab";
-import EditPrice from "./EditPrice";
 import EditImage from "./EditImage";
 import "./editproduct.css";
 import { useEffect, useState } from "react";
-import { DataProducts } from "../../data/data";
+import { DataBlog } from "../../../../data/data";
 import { useParams } from "react-router-dom";
 
 const EditProduct = () => {
-  const { products } = useParams();
-  const model = {products};
+  const { productId } = useParams();
   const [product, setProduct] = useState([]);
   function SelectPro() {
-    const handlePro = DataProducts.filter((item) => item.id == "p1");
+    const handlePro = DataBlog.filter((item) => item.id == productId);
     setProduct(handlePro);
   }
-
   useEffect(() => {
-    SelectPro()
+    SelectPro();
   }, []);
 
   return (
     <div id="editproduct">
-      {product.map((item, i) => (
-        <div key={i}>
+      {product.map((item) => (
+        <>
           <div className="header-edit">
             <div className="title">
-              <h5>ویرایش {item.name}</h5>
+              <h5>ویرایش {item.title}</h5>
               <button className="btn">
-                <BsFillArrowRightCircleFill /> بازگشت به لیست محصولات
+                <BsFillArrowRightCircleFill /> بازگشت به لیست بلاگ
               </button>
             </div>
             <div className="buttons">
-              <button className="btn btn-secondary">
-                <AiOutlineEye /> پیش نمایش
-              </button>
               <button className="btn btn-primary">
                 <BsBoxArrowInDown /> ذخیره
               </button>
@@ -46,7 +39,7 @@ const EditProduct = () => {
                 <BsBoxArrowInDown /> ذخیره و ادامه ویرایش
               </button>
               <button className="btn btn-success">
-                <RiFileCopyLine /> کپی از محصول
+                <RiFileCopyLine /> کپی از بلاگ
               </button>
               <button className="btn btn-danger">
                 <Trash /> حذف
@@ -60,13 +53,12 @@ const EditProduct = () => {
             className="tabs mb-3"
           >
             <Tab eventKey="home" title="استاندارد">
-              <EditTab data={item} model={model} />
+              <EditTab item={item} product={product} />
             </Tab>
           </Tabs>
 
-          <EditPrice />
           <EditImage />
-        </div>
+        </>
       ))}
     </div>
   );

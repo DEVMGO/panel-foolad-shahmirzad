@@ -65,7 +65,7 @@ function Table({ columns, data }) {
             return (
               <tr {...row.getRowProps()} key={i} id={i}>
                 <td>
-                  <input type="checkbox" onChange={handleSelect(i)} />
+                  <input type="checkbox" onChange={() => handleSelect(i)} />
                 </td>
                 {row.cells.map((cell, i) => {
                   return <td>{cell.render("Cell")} {i == 2 ? '(ریال)' : ''}</td>;
